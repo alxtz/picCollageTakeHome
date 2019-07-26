@@ -43,7 +43,7 @@ class Input extends React.Component {
 
     this.requestSource = source
 
-    axios.get(`https://www.omdbapi.com/?s=${str}&apikey=68def545`, {
+    axios.get(`https://www.omdbapi.com/?s=${str}&apikey=2ac2d3d6`, {
       cancelToken: source.token
     })
       .then(resp => {

@@ -21,14 +21,14 @@ class App extends React.Component {
     }
 
     const url = 'https://www.omdbapi.com'
-    axios.get(`${url}/?s=${str}&apikey=68def545`)
+    axios.get(`${url}/?s=${str}&apikey=2ac2d3d6`)
       .then(resp => {
         if (resp.data.totalResults) {
           const pages = Math.ceil(resp.data.totalResults / 10)
           const promises = []
 
           for (let i = 1; i <= pages; i++) {
-            promises.push(axios.get(`${url}/?s=${str}&apikey=68def545&page=${i}`))
+            promises.push(axios.get(`${url}/?s=${str}&apikey=2ac2d3d6&page=${i}`))
           }
 
           let allSearchResult
