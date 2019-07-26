@@ -21,7 +21,7 @@ class Input extends React.Component {
     isInputFocused: false,
     results: [],
     // showAutocomplete: false
-    showAutocomplete: true
+    showAutocomplete: false
   }
 
   requestSource = null
@@ -43,7 +43,7 @@ class Input extends React.Component {
 
     this.requestSource = source
 
-    axios.get(`http://www.omdbapi.com/?s=${str}&apikey=68def545`, {
+    axios.get(`https://www.omdbapi.com/?s=${str}&apikey=68def545`, {
       cancelToken: source.token
     })
       .then(resp => {

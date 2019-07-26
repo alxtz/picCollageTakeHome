@@ -20,7 +20,7 @@ class App extends React.Component {
       cookie.set('recent-searchs', [...recentSearchs, str])
     }
 
-    const url = 'http://www.omdbapi.com'
+    const url = 'https://www.omdbapi.com'
     axios.get(`${url}/?s=${str}&apikey=68def545`)
       .then(resp => {
         if (resp.data.totalResults) {
